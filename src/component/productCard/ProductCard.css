@@ -1,0 +1,12 @@
+.product-card{
+    width:  250px;
+    height: auto;
+    padding: 0.3rem;
+    border: 1px solid whitesmoke;
+    border-radius: 0.3rem;
+}
+
+.product-image > img{
+    width: 100%;
+    height:  auto;
+}

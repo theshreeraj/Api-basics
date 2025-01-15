@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import ProductCard from "../productCard/ProductCard";
 
 const BestSeller = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const BestSeller = () => {
 
   return (
     <div>
-      <h1>This is the product list</h1>
+      <h1>Bestsellers</h1>
       <div
         style={{
           display: "flex",
@@ -35,16 +36,12 @@ const BestSeller = () => {
         }}
       >
         {products.map((product) => (
-          <div key={product.id}>
-            <div>
-              <img style={{ width: "300px" }} src={product.images[0]} alt="" />
-            </div>
-            <div>
-              <p>{product.name}</p>
-              <p>{product.title}</p>
-              <p>&#8377;{product.price}</p>
-            </div>
-          </div>
+          <ProductCard
+            key={product.id}
+            image={product.images[0]}
+            title={product.title}
+            price={product.price}
+          />
         ))}
       </div>
     </div>
